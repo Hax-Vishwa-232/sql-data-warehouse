@@ -11,7 +11,7 @@ Script Purpose: this stored procedure loads data into Silver schema from Bronze 
 
 ** User Note: Some Columns in Tables might require additional manual Cleaning Operations
               (like prd_nm in crm_prd_info table). Some of predicted errors and 
-              corresponding operations on such columns are listed in Cleaning Operations' Files.
+              corresponding operations on such columns are listed in Transformation Operations' Files.
               Kindly refer them for Reference.
 
 Parameters: None (this stored procedure does not accept any parameters)
