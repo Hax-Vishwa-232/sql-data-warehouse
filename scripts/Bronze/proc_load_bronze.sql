@@ -10,6 +10,8 @@ Script Purpose: this stored procedure loads data into bronze schema from externa
 
 Parameters: None (this stored procedure does not accept any parameters)
 
+NOTE: Rename file path according system download path settings
+
 Usage example: 
 	EXEC bronze.load_bronze;
 */
@@ -35,7 +37,7 @@ BEGIN
 		TRUNCATE TABLE bronze.crm_cust_info; --First truncate the existing table, before loading entire data again
 		PRINT '>> Inserting Data into: crm_cust_info';
 		BULK INSERT bronze.crm_cust_info
-		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
+		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_crm\cust_info.csv' -- Path
 		WITH (
 			FIRSTROW = 2, --Skip the first row from csv file during insert as it contain column names
 			FIELDTERMINATOR = ',', --Specify the separator type
@@ -50,7 +52,7 @@ BEGIN
 		TRUNCATE TABLE bronze.crm_prd_info;
 		PRINT '>> Inserting Data into: crm_prd_info';
 		BULK INSERT bronze.crm_prd_info
-		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_crm\prd_info.csv'
+		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_crm\prd_info.csv' -- Path
 		WITH (
 			FIRSTROW = 2, 
 			FIELDTERMINATOR = ',', 
@@ -65,7 +67,7 @@ BEGIN
 		TRUNCATE TABLE bronze.crm_sales_details;
 		PRINT '>> Inserting Data into: crm_sales_details';
 		BULK INSERT bronze.crm_sales_details
-		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_crm\sales_details.csv'
+		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_crm\sales_details.csv' -- Path
 		WITH (
 			FIRSTROW = 2, 
 			FIELDTERMINATOR = ',', 
@@ -83,7 +85,7 @@ BEGIN
 		TRUNCATE TABLE bronze.erp_CUST_AZ12;
 		PRINT '>> Inserting Data into: erp_CUST_AZ12';
 		BULK INSERT bronze.erp_CUST_AZ12
-		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv'
+		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv' -- Path
 		WITH (
 			FIRSTROW = 2, 
 			FIELDTERMINATOR = ',', 
@@ -98,7 +100,7 @@ BEGIN
 		TRUNCATE TABLE bronze.erp_LOC_A101;
 		PRINT '>> Inserting Data into: erp_LOC_A101';
 		BULK INSERT bronze.erp_LOC_A101
-		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_erp\LOC_A101.csv'
+		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_erp\LOC_A101.csv' -- Path
 		WITH (
 			FIRSTROW = 2, 
 			FIELDTERMINATOR = ',', 
@@ -113,7 +115,7 @@ BEGIN
 		TRUNCATE TABLE bronze.erp_PX_CAT_G1V2;
 		PRINT '>> Inserting Data into: erp_PX_CAT_G1V2';
 		BULK INSERT bronze.erp_PX_CAT_G1V2
-		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_erp\PX_CAT_G1V2.csv'
+		FROM 'C:\Users\dell\Downloads\sql-data-warehouse-project\datasets\source_erp\PX_CAT_G1V2.csv' -- Path
 		WITH (
 			FIRSTROW = 2, 
 			FIELDTERMINATOR = ',', 
