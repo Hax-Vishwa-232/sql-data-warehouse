@@ -96,5 +96,6 @@ data-warehouse-project/
 ## 🌟 About Me
 
 Hi there! I'm **Vishwa Bandhu**, an undergraduate currently pursuing Bachelors of Technology at NIT Bhopal, M.P. (India). I am an aspiring data engineer and currently looking for a data engineering role. Feel free to connect via LinkdIn!
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vishwa-bandhu-990946281/)
 
